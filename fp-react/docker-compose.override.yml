@@ -1,0 +1,58 @@
+# This file overrides docker-compose.yml when you simply run "docker-compose up"
+# This makes it easy to run a local instance of the app from your local filesystem
+# This allows you to configure where your personal certs are for
+# authenticating against the Mailer service.  Talk to John Russella
+# for help on getting certs, if needed, and how to get your certs
+# authorized for model office Mailer Service.
+version: "3.8"
+services:
+  mongo:
+    image: library/mongo:3.6.21
+    logging:
+      # the following logging config disables logging - in theory
+      driver: "none"
+    ports:
+      - 27017-27019:27017-27019
+  nodeserver:
+    build:
+      context: ./
+      target: devnodeserver
+    # The following maps your local ~/certs folder into the image for use
+    # If your certs were in /stuff/my_certs then you would change the line to
+    # - /stuff/my_certs:/app/certs
+    # The /app/certs portion has to match that used in the cert env vars, below
+    volumes:
+      - ~/certs:/app/certs
+      - ./server:/app/server
+    # Remember that the following cert paths point to locations IN THE IMAGES,
+    # not your file system. The paths have to match those in the volume definitions
+    environment:
+      - ENVIRONMENT_NAME=${ENVIRONMENT_NAME}
+      - MAILER_URL=${MAILER_URL}
+      - MONGO_URI=mongodb://mongo:27017/chatquote
+      - OAUTH_CLIENT_SECRET=${OAUTH_CLIENT_SECRET}
+      - OAUTH_CLIENT_ID=${OAUTH_CLIENT_ID}
+      - OAUTH_LOGOUT_URL=${OAUTH_LOGOUT_URL}
+      - OAUTH_AUTHORIZATION_URL=${OAUTH_AUTHORIZATION_URL}
+      - OAUTH_TOKEN_URL=${OAUTH_TOKEN_URL}
+      - OAUTH_USERINFO_URL=${OAUTH_USERINFO_URL}
+      - PERSONA_URL=${PERSONA_URL}
+      - PML_BASE_URL=${PML_BASE_URL}
+      - SESSION_SECRET=${SESSION_SECRET}
+      - THREAD_COUNT=1
+      - TLS_CA_BUNDLE=/app/certs/PML-CA_Bundle.pem
+      - TLS_KEY_BASE64=${TLS_KEY_BASE64}
+      - TLS_CERT_BASE64=${TLS_CERT_BASE64}
+      - LOG_PRETTY=${LOG_PRETTY}
+      - SERVER_PORT=${SERVER_PORT}
+      - NODE_ENV=${NODE_ENV}
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+  reactserver:
+    build:
+      context: ./
+      target: devreactserver
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 3000:3000

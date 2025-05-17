@@ -1,0 +1,40 @@
+﻿example,question
+Can you display a list of agents in my office who have abnormally high business volume?,A
+I'd like to see which agents in our office have abnormally low business volume.,A
+Show me the agents who have an unusually high business volume.,A
+Which agents have exceptionally low business volume?,A
+Can you list the agents who have an abnormally high amount of business volume?,A
+I need to know which agents have a significantly low business volume.,A
+Provide me with a breakdown of agents who exhibit unusually high business volume.,A
+Show me the agents who are experiencing abnormally low business volume.,A
+Which agents have an exceptionally high business volume?,A
+Display agents who are operating with an abnormally low amount of business volume.,A
+Show me all agents who have written a policy during the month of january 2023,B
+Show me all agents who did not write a policy from Deceber 1st 2023 to Jan 1st 2024.,B
+Show me all agents who did not write a policy after Jan 1st 2024.,B
+"Show me all agents who hav not written a policy before January 1st, 2020",B
+Show me all agents who have written a policy before January 1st 2020,B
+Show me all agents who have written a policy after January 1st 2024,B
+"Hey, can you show me all agents in my office who haven't written a policy before March 2023?",B
+"Could you show me which agents in my office haven't written a policy after June 15th, 2022?",B
+"Hey, I'm curious, can you tell me which agents in my office haven't written a policy between November 2021 and February 2022?",B
+"Can you display a list of agents in my office who have written policies with a face amount over $500,000 within the last year?",C
+"I'd like to see which agents in our office have not yet written policies with a face amount under $100,000 for the past six months.",C
+"Show me the agents who have written policies between a face amount of $250,000 within the last quarter.",C
+"Which agents have written policies with a face amount over $1,000,000 during the previous year?",C
+"Can you list the agents who haven't written policies with a face amount under $50,000 for the last three months?",C
+"I need to know which agents have written policies between a face amount of $200,000 over the last six months.",C
+"Provide me with a breakdown of agents who have written policies over the face amount of $750,000 during the past year.",C
+"Show me the agents who have not written policies with a face amount under $75,000 in the last quarter.",C
+"Which agents have written policies over a face amount of $300,000 within the previous year?",C
+"Display agents who have written policies between a face amount of $150,000 during the past six months.",C
+What's the capital of Uzbekistan?,
+How many planets are there in the solar system?,
+What's the recipe for making a chocolate cake?,
+Can you explain the theory of relativity?,
+How do you perform a backflip?,
+What's the best strategy for playing chess?,
+Can you list the ingredients needed for a spaghetti carbonara?,
+How deep is the Mariana Trench?,
+What's the average temperature on Mars?,
+Who won the Academy Award for Best Picture in 2007?,

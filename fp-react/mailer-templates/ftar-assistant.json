@@ -1,0 +1,26 @@
+{
+  "_id" : ObjectId("60e5e52127f1a8cfbd3a996a"),
+  "_class" : "com.pennmutual.services.mailer.model.Template",
+  "templateId" : "ftar-assistant",
+  "bodyTemplate" : "",
+  "bodyTemplates" : [
+    {
+      "body" : " _formName: ${_formName!}\n submitterFullName: ${submitterFullName!}\n submitterUserID: ${submitterUserID!}\n submitterEmail: ${submitterEmail!}\n employeeType: ${employeeType!}\n startDate: ${startDate!}\n firstName: ${firstName!}\n lastName: ${lastName!}\n lanID: ${lanID!}\n taxID: ${taxID!}\n distributionChannel: ${distributionChannel!}\n officeCode: ${officeCode!}\n altEmailAddress: ${altEmailAddress!}\n hasPMLEmail: ${hasPMLEmail!'no'}\n PMLEmailAddress: ${PMLEmailAddress!}\n fp_1_name: ${fp_1_name!}\n fp_1_code: ${fp_1_code!}\n fp_2_name: ${fp_2_name!}\n fp_2_code: ${fp_2_code!}\n fp_3_name: ${fp_3_name!}\n fp_3_code: ${fp_3_code!}\n fp_4_name: ${fp_4_name!}\n fp_4_code: ${fp_4_code!}\n fp_5_name: ${fp_5_name!}\n fp_5_code: ${fp_5_code!}\n specialRequests: ${specialRequests!}",
+      "mimeType" : "text/plain",
+      "_default" : true
+    }
+  ],
+  "subjectTemplate" : "FTAR - Assistant Submission: ${firstName} ${lastName}",
+  "sentCounter" : 14,
+  "autoSeeded" : true,
+  "disabled" : false,
+  "requiredFields" : [],
+  "toList" : [
+    "ftarsupport@pennmutual.com"
+  ],
+  "ccList" : [],
+  "bccList" : ["rhodes.keneth@pennmutual.com", "oryl.michael@pennmutual.com"],
+  "namespaces" : [
+    "account-management"
+  ]
+}

@@ -1,0 +1,20 @@
+GUIDELINES
+Given the user input, calculate the start and end dates based on relative time expressions.
+The current date is ${current_date}.
+Report your answer with the following format:
+    Start: mm-dd-YYYY - "[Quotation]", where Quotation is a placeholder. If the user specifies a relative time frame, calculate the start date accordingly. If no start date is specified, state 01-01-1900.
+    End: mm-dd-YYYY - "[Quotation]", where Quotation is a placeholder. Use the current date if the user specifies a relative time frame with no specific end date.
+
+Provide an EXACT quotation from the input to support your response. DO NOT change anything about the formatting of the text in the quotation.
+
+PROMPT 
+Show me all agents in my office who have issued a policy over $$2 million since Jan 1, 2024.
+
+COMPLETION 
+Start: 01-01-2024 - "since Jan 1, 2024."
+End: ${current_date} - "since Jan 1, 2024."
+
+PROMPT 
+${input_text}
+
+COMPLETION

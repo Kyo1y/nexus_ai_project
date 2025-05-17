@@ -1,0 +1,5 @@
+# Helper command to keep from having to type long docker-compose commands
+#
+# This will run with the default (and included) .env file and will make
+# use of the default docker-compose.override.yml file, as well.
+docker-compose up

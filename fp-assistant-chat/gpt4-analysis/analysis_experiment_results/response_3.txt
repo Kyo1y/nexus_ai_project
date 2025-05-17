@@ -1,0 +1,15 @@
+1. The agents with abnormally higher or lower volume compared to their historical norms are:
+
+   - Agent A: Current volume is lower than the historical average.
+   - Agent B: Current volume is lower than the historical average.
+   - Agent D: Current volume is higher than the historical average.
+   - Agent E: Current volume is higher than the historical average.
+   - Agent G: Current volume is lower than the historical average.
+   - Agent H: Current volume is higher than the historical average.
+   - Agent I: Current volume is higher than the historical average.
+   - Agent K: Current volume is higher than the historical average.
+   - Agent L: Current volume is lower than the historical average.
+
+2. I chose these agents because their current volume is significantly different from their historical average. This could indicate a change in their performance, either positive or negative. 
+
+To get a more reliable answer, we would need more data points and possibly consider other factors such as the time period over which the historical average was calculated, the standard deviation or variance of the historical data, and any recent changes in the agents' work environment or responsibilities.

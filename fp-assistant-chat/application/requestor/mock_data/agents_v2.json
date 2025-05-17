@@ -1,0 +1,76 @@
+{
+  "abnormally_high": [
+    {
+      "historical_average": 12.75,
+      "current_volume": 17,
+      "ratio": 1.3333333333333333,
+      "agent_name": "Binyomin Weisz",
+      "agent_code": "9278C"
+    },
+    {
+      "historical_average": 9.17,
+      "current_volume": 17,
+      "ratio": 1.853448275862069,
+      "agent_name": "Menachem Ungar",
+      "agent_code": "1261E"
+    },
+    {
+      "historical_average": 3.1,
+      "current_volume": 6,
+      "ratio": 1.935483870967742,
+      "agent_name": "Paul Carag",
+      "agent_code": "4038D"
+    },
+    {
+      "historical_average": 4.55,
+      "current_volume": 9,
+      "ratio": 1.978021978021978,
+      "agent_name": "Richard Warren",
+      "agent_code": "4912D"
+    },
+    {
+      "historical_average": 3.36,
+      "current_volume": 6,
+      "ratio": 1.7857142857142858,
+      "agent_name": "Alex Kreis",
+      "agent_code": "92345"
+    },
+    {
+      "historical_average": 3.64,
+      "current_volume": 10,
+      "ratio": 2.7472527472527473,
+      "agent_name": "Erick Colon",
+      "agent_code": "8839D"
+    },
+    {
+      "historical_average": 5.27,
+      "current_volume": 8,
+      "ratio": 1.5176470588235296,
+      "agent_name": "Maureen Decker",
+      "agent_code": "2755D"
+    }
+  ],
+  "abnormally_low": [
+    {
+      "historical_average": 3.55,
+      "current_volume": 2,
+      "ratio": 0.5633802816901409,
+      "agent_name": "Bernard Feder",
+      "agent_code": "8993C"
+    },
+    {
+      "historical_average": 2.75,
+      "current_volume": 0,
+      "ratio": 0,
+      "agent_name": "Burach Mandel",
+      "agent_code": "8288C"
+    },
+    {
+      "historical_average": 4,
+      "current_volume": 0,
+      "ratio": 0,
+      "agent_name": "Michael Lapage",
+      "agent_code": "8660D"
+    }
+  ]
+}

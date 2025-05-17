@@ -1,0 +1,8 @@
+# Ensure that you have added env vars from your AWS login to your shell so that this command will run
+# For example, they would look similar to these:
+#
+# export AWS_ACCESS_KEY_ID="ASIAWUAXXXXXMKN36WB"
+# export AWS_SECRET_ACCESS_KEY="RMrHp8zHOcqNRJkrzqd7XXXXXHw28eM7oJ1Q4Qc8"
+# export AWS_SESSION_TOKEN="IQoJb3JpZ2luX2VjEDgaCXVzLWVhc3QtMSJHMEUCIQDK+j1XOAu1WXXXXX6DY3B08sEkSdHY803DqB9kyDXflgIgUFeoyu266VVsLUBTf8QcQ6z3Al/xaAYxOVyESZoFy6kqmgMIwP//////////ARAAGgw0NTUyOTYzNDU5OTMiDNgCwo3MoCg5ulEYqiruAkWpl+lxan/Jfnpw4AUaua4NJS+rEKhoRWjrEwOGTrthDQKLKpvAScBqTmSxTdMXOFnM8v5LeVn6nXp3J5R3VqcRhEErKP3dh0x/mBWUsUh19t4XLyFV4Pt0TgAROAS7HiFU7UFZU/oqqrd6m5IHUT14+vwbQ6WNnRtX+immHht6XhTfbIpUadzeMM4w+mrUehLYcy265wq32lIUMTWyeLf6+M8MZg3Vs/3h/t/hmx+q1nbtbUv61aGlYnDPoo9kv0iPbjrCuD5agK/T5+oo+q173PWsmu7prQEInsaWReYkrk8d509TGpldUbjhGGlrrT8OgpByNZtpV1scscTB+817oP/4IBlWZMwyVx8v73iUaWSsrrfWPk0cVsPimMxPHE4mSR1RHczwvgCR01Q2dnZWouVhpgV64bw5nSq/tv7/v62bahXKh/FFMFLn0qswJQfr59bPO2MP8OROLKGV1FvMHx8oikS+98iZ50qm7TCRw7uLBjqmAfhZ3TJoDxFG8KfVZAHiqfkeKTLkMhwdWjBvJbUK8Q+bzokyQuDUF7ZgcbBoQ7OxMQcXRmdoynkss5zv2kzSzNff3zsukG33/n6rgTRZO4M+KGlh0k/7NdB6e4fQpnmjkBq0raMPWGJzJVjybCrWV6NwKXfIUl0kHPbS1X8+FW6sQMWICiMEuiTgLwup9qq9HGWYUHndSUSL8/KhisGKFAInh6+s5cw="
+#
+aws ecr get-login-password | docker login -u AWS --password-stdin 939625251876.dkr.ecr.us-east-1.amazonaws.com

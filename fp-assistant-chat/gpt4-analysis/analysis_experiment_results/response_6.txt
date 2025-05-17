@@ -1,0 +1,15 @@
+1. The agents with abnormally higher or lower volume compared to historical norms are:
+
+   - Agent A: Current volume is lower than the historical average.
+   - Agent B: Current volume is significantly lower than the historical average.
+   - Agent D: Current volume is slightly higher than the historical average.
+   - Agent E: Current volume is slightly higher than the historical average.
+   - Agent G: Current volume is lower than the historical average.
+   - Agent H: Current volume is higher than the historical average.
+   - Agent I: Current volume is significantly higher than the historical average.
+   - Agent K: Current volume is significantly higher than the historical average.
+   - Agent L: Current volume is significantly lower than the historical average.
+
+2. The agents were chosen based on the comparison between their historical average and current volume. If the current volume is significantly higher or lower than the historical average, it indicates an abnormality. The term "significantly" is subjective and depends on the context. For example, for Agent B, even though the absolute difference is 75 (which is a large number), it's only 50% of the historical average. On the other hand, for Agent I, the absolute difference is only 4, but it's a 40% increase from the historical average, which could be considered significant in this context.
+
+To get a more reliable answer, we would need to know more about the nature of the work the agents are doing, the time period over which the averages are calculated, and the standard deviation or variance of their performance. This would allow us to determine if the changes are within normal fluctuations or if they are truly significant.

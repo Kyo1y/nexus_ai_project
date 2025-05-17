@@ -1,0 +1,9 @@
+if [ "$1" = "cache" ]; then
+  echo Using Docker Cache
+  docker build -t chatquote:latest --target server --pull .
+else
+  echo Not using Docker Cache
+  docker build --no-cache -t chatquote:latest --target server --pull .
+fi
+
+docker tag chatquote:latest pennmutual/chatquote

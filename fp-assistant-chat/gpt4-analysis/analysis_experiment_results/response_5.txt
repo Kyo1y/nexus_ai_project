@@ -1,0 +1,9 @@
+1. Agents with abnormally higher or lower volume compared to historical norms are: A, B, C, D, E, G, H, I, K, and L.
+
+2. These agents were chosen because their current volume is significantly different from their historical average. For example, Agent B's current volume is half of their historical average, while Agent I's current volume is 40% higher than their historical average.
+
+3. The significance of absolute vs relative change in this decision is that absolute change shows the exact difference in volume, while relative change shows the proportion of the change in relation to the historical average. For instance, Agent A's absolute change is -1, but the relative change is -50%. This means that although the absolute change is small, the relative change is significant.
+
+4. Potential outliers or aberrations in the data could be Agent B and Agent L. Agent B's current volume is significantly lower than their historical average, while Agent L's current volume is significantly lower than their historical average. These could be due to errors in data entry or unusual circumstances affecting these agents' performance.
+
+To get a more reliable answer, it would be helpful to have more data points, such as a longer history of each agent's performance, and additional context, such as any changes in their work conditions or responsibilities. It would also be useful to apply statistical methods to quantify the degree of abnormality and identify outliers.

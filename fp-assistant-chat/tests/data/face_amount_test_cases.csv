@@ -1,0 +1,11 @@
+﻿example,written,date_range,date_value,amount_range,amount_value
+"Can you display a list of agents in my office who have written policies with a face amount over $500,000 since January 1, 2022?",TRUE,after,"Start: 01-01-2022 - """"\nEnd: 03-04-2024 - """"",above,"Amount: 500000 - """""
+"I'd like to see which agents in our office have not yet written policies with a face amount under $100,000 in the past six months.",FALSE,after,"Start: 08-28-2023 - """"\nEnd: 03-04-2024 - """"",below,"Amount: 100000 - """""
+"Show me the agents who wrote policies between a face amount of $250,000 and $500,000 during Q4 of 2023.",TRUE,between,"Start: 10-01-2023 - """"\nEnd: 12-31-2023 - """"",between,"Amount: 250000 to 500000 - """""
+"Which agents wrote policies with a face amount over $1,000,000 during 2023?",TRUE,between,"Start: 01-01-2023 - """"\nEnd: 12-31-2023 - """"",above,"Amount: 1000000 - """""
+"Can you list the agents who haven't written policies with a face amount under $50,000 duraing the last three months?",FALSE,after,"Start: 11-30-2023 - """"\nEnd: 03-04-2024 - """"",below,"Amount: 50000 - """""
+"I need to know which agents have written policies between a face amount of $200,000 to 400,000 over the last six months.",TRUE,after,"Start: 08-28-2023 - """"\nEnd: 03-04-2024 - """"",between,"Amount: 200000 to 400000 - """""
+"Provide me with a breakdown of agents who have written policies over the face amount of $750,000 during the past year.",TRUE,after,"Start: 02-28-2023 - """"\nEnd: 03-04-2024 - """"",above,"Amount: 750000 - """""
+"Show me the agents who have not written policies with a face amount under $75,000 in the last quarter.",FALSE,after,"Start: 09-01-2023 - """"\nEnd: 12-31-2023 - """"",below,"Amount: 75000 - """""
+"Which agents have written policies over a face amount of $300,000 within the previous year?",TRUE,between,"Start: 01-01-2023 - """"\nEnd: 12-31-2023 - """"",above,"Amount: 300000 - """""
+"Display agents who have written policies between a face amount of $150,000 and 300000 during the past six months.",TRUE,after,"Start: 08-28-2023 - """"\nEnd: 03-04-2024 - """"",between,"Amount: 150000 to 300000 - """""

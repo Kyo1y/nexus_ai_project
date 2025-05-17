@@ -1,0 +1,27 @@
+{
+  "_id" : ObjectId("61965e0a415aef74a415f3b5"),
+  "templateId" : "covid-test-results-confirmation",
+  "bodyTemplate" : "",
+  "bodyTemplates" : [
+    {
+      "body" : "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"><html><head><title>Penn Mutual</title><style>a {color: \"#006A55\";}</style></head><body style=\"font-family: Arial, Helvetica, sans-serif;background-color: #f7f7f7;line-height: 20px;font-size: 14px;\"><center><table style=\"background-color: white;border: 1px solid #dddddd;width: 600px;margin: auto;margin-top: 2.5em;font-family: Arial, Helvetica, sans-serif;\" border=\"0\"><tr><td ><table style=\"font-family:Arial, Helvetica, sans-serif;border-bottom: 2px black solid;padding-bottom: 3px;\" width=\"100%\" border=\"0\"\" cellpadding=\"2\" cellspacing=\"2\"><tr><td align=\"left\"  width=\"50%\"><img  width=\"332\" width=\"60\"alt=\"== Penn Mutual ==\" src=\"http://image.mail-pennmutual.com/lib/fe5d15707c6100797c16/m/1/61a6ec03-0063-43ca-adac-a6a325365fae.png\" /></td><td width=\"50%\" align=\"right\" style=\"padding-right:10px;font-weight:bold;font-size: 14px;font-family:Arial, Helvetica, sans-serif;\"></td></tr></table><table style=\"font-family: Arial, Helvetica, sans-serif;\"><tr><td style=\"padding-left: 20px; padding-right: 20px;padding-top: 20px;\"><h1 style=\"font-weight: 700;font-size: 24px;\">Hello ${submitterFullName},</h1><p>This message serves as confirmation that your recent COVID Test Results have been submitted to Human Resources.</p><p>Thank you,</p><p style=\"font-weight:bold;\">The Penn Mutual Life Insurance Company</p><p style=\"padding-top: 50px;color: grey;font-size: 10px;font-style: italic;\">Please do not reply. Emails sent to this address are not monitored.</p></td></tr></table></tr></td></table><table style=\"width:600px; margin:auto;font-family:Arial, Helvetica, sans-serif;\"><tr><td style=\"margin: auto;font-size: 0.65em;color: grey;width: 600px;padding-top: 1.25em;text-align: center;\">&copy; The Penn Mutual Life Insurance Company, Philadelphia PA 19172</td></tr><tr><td style=\"margin:auto;font-size: 0.65em;width: 600px;text-align: center;\"><a href=\"https://www.pennmutual.com/terms-of-use\">Terms of Use</a> | <a href=\"https://www.pennmutual.com/privacy-policies\">Privacy Policies</a> | <a href=\"https://www.pennmutual.com/accessibility-policy\">Accessibility Policy</a></td></tr></table></center></body></html>",
+      "mimeType" : "text/html",
+      "_default" : true
+    }
+  ],
+  "subjectTemplate" : "COVID test results received",
+  "sentCounter" : 0,
+  "autoSeeded" : true,
+  "disabled" : false,
+  "requiredFields" : [],
+  "toList" : [],
+  "ccList" : [],
+  "bccList" : [
+    "oryl.michael@pennmutual.com",
+    "worman.michael@pennmutual.com"
+  ],
+  "namespaces" : [
+    "hr"
+  ],
+  "_class" : "com.pennmutual.services.mailer.model.Template"
+}

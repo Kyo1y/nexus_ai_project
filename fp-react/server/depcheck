@@ -1,0 +1,2 @@
+dependency-check -s . -P dep.properties --nodeAuditSkipDevDependencies
+

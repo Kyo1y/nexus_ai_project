@@ -1,0 +1,2 @@
+# Shows logs for all services run with docker-compose up command
+docker-compose logs -f

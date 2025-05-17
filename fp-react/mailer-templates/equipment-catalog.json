@@ -1,0 +1,28 @@
+{
+  "_id" : ObjectId("60f1837b4d0c5b2df1192023"),
+  "templateId" : "equipment-catalog",
+  "bodyTemplate" : "",
+  "bodyTemplates" : [
+    {
+      "body" : "Employee Name: ${submitterFullName!}\n Employee Network ID: ${submitterUserID!}\n Employee Email: ${submitterEmail!}\n Manager Email: ${managerEmail!}\n Office Affiliation: ${office!}\n Field Office: ${fieldOffice!}\n Cost Center: ${costCenter!}\n New Employee?: ${newEmployee?string('yes', 'no')}\n\n Equipment requested:\n\n Docking Station: ${requestDockingStation?string('yes', 'no')}\n First Monitor: ${requestFirstMonitor?string('yes', 'no')}\n Second Monitor: ${requestSecondMonitor?string('yes', 'no')}\n Keyboard and Mouse: ${requestKeyboardMouse?string('yes', 'no')}\n Webcam: ${requestWebcam?string('yes', 'no')}\n Headset: ${requestHeadset?string('yes', 'no')}\n Zoom Pro License: ${requestZoomLicense?string('yes', 'no')}\n Chair: ${requestChair?string('yes', 'no')}\n\n ShippingMethod: ${deliveryMethod!}\n\n Intended Recipient: ${recipientName!}\n Address1: ${addressLine1!}\n Address2: ${addressLine2!}\n Address City: ${addressCity!}\n Address State: ${addressState!}\n Address Zip: ${addressZip!}\n Shipping Phone: ${shippingPhone!}\n\n Special Instructions: ${specialInstructions!} ",
+      "mimeType" : "text/plain",
+      "_default" : true
+    }
+  ],
+  "subjectTemplate" : "Equipment Order: ${submitterFullName}",
+  "sentCounter" : 52,
+  "autoSeeded" : false,
+  "disabled" : false,
+  "requiredFields" : [],
+  "toList" : [
+    "worman.michael@pennmutual.com"
+  ],
+  "ccList" : [],
+  "bccList" : [
+    "oryl.michael@pennmutual.com"
+  ],
+  "namespaces" : [
+    "solution-center"
+  ],
+  "_class" : "com.pennmutual.services.mailer.model.Template"
+}

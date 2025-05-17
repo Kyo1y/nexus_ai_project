@@ -1,0 +1,14 @@
+1. The agents with abnormally higher or lower volume compared to their historical norms are: 
+   - Agent A: Lower volume
+   - Agent B: Lower volume
+   - Agent D: Higher volume
+   - Agent H: Higher volume
+   - Agent I: Higher volume
+   - Agent K: Higher volume
+   - Agent L: Lower volume
+
+2. I chose these agents because their current volume is significantly different from their historical average. For example, Agent B's current volume is half of its historical average, indicating a significant decrease. Similarly, Agent K's current volume is significantly higher than its historical average, indicating a significant increase.
+
+3. The significance of absolute vs relative change in this decision is that absolute change gives us the exact difference in volume, while relative change gives us the proportion of the change in relation to the historical average. For instance, Agent A's absolute change is 1 (2-1), but its relative change is 50% (1/2), which is a significant proportion. On the other hand, Agent B's absolute change is 75 (150-75), but its relative change is also 50% (75/150). Even though the absolute changes are different, the relative changes are the same, indicating a similar proportion of decrease. 
+
+To get a more reliable answer, we would need to know the standard deviation or variance of the historical data to determine if the current volume is within the normal range of fluctuation. Additionally, understanding the context behind these changes (e.g., seasonal trends, market conditions, etc.) would also be helpful.

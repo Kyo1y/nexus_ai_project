@@ -1,0 +1,22 @@
+Given the following data on agent performance:
+﻿agent name,historical average,current volume
+A,2,1
+B,150,75
+C,6,5
+D,45,50
+E,71,73
+F,82,82
+G,12,10
+H,2,3
+I,10,14
+J,33,33
+K,30,50
+L,60,10
+
+1. Identify agents with abnormally higher or lower volume compared to historical norms.
+2. For these agents, provide confidence values or statistical measures indicating the reliability of the observed deviations.
+3. Calculate or estimate p-values for the identified deviations.
+4. Discuss any insights on the overall data volume and sparsity in relation to the identified outliers.
+
+For these questions, do your best to provide estimates and explain what would be needed to get a more reliable answer.
+Keep your responses as concise as possible.

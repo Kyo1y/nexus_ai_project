@@ -1,0 +1,45 @@
+.TableHeader {
+    background-color: #37474f;
+}
+
+.MuiTable-root {
+    width: auto;
+    margin: auto;
+}
+
+.CustSortLabel.Mui-active {
+    color: #fff;
+}
+
+.CustSortLabel.Mui-active .MuiTableSortLabel-icon {
+    color: #fff;
+}
+
+.MuiTableCell-root {
+    border-bottom: inherit;
+}
+
+table {
+    
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f8fcf2; /* Darker table background color */
+    
+}
+
+th, td {
+    border: 1px solid #444; /* Darker border color */
+    padding: 8px;
+    text-align: left;
+}
+
+td {
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+th {
+    background-color: #37474f; /* Darker header background color */
+    color: #fff; /* Light text color */
+    text-align: center;
+}

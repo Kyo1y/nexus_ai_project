@@ -1,0 +1,184 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.8.0",
+    "title": "ChatQuote",
+    "description": "Application to provide forms for general use"
+   },
+  "tags": [
+    {
+      "name": "Submissions",
+      "description": "API for saving and retrieving form submissions"
+    }
+  ],
+  "paths": {
+    "/submissions/file/{id}": {
+      "get": {
+        "summary": "View a file previously saved from a form submission",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "The ID of the file to be returned"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the file contents with the appropriate MIME type"
+          }
+        }
+      }
+    },
+    "/submissions/{id}": {
+      "get": {
+        "summary": "Get a submission from the database",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "The ID of the requested submission"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Submission"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/submissions": {
+      "post": {
+        "summary": "Save a submission into the database.  Any properties defined in the request body will be saved.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmissionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Submission"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "File": {
+        "required": [
+          "_id",
+          "fileID",
+          "fieldName",
+          "fileName",
+          "url"
+        ],
+        "properties": {
+          "_id": {
+            "type": "integer",
+            "uniqueItems": true,
+            "example": "614b8627c85dfc6b10d2b713"
+          },
+          "fileID": {
+            "type": "integer",
+            "uniqueItems": true,
+            "example": "614b8627c85dfc6b10d2b713"
+          },
+          "fieldName": {
+            "type": "string",
+            "example": "some-form-name"
+          },
+          "fileName": {
+            "type": "string",
+            "example": "covidResults1"
+          },
+          "url": {
+            "type": "string",
+            "example": "http://localhost:3000/submissions/file/6197cb844b0b58e8748ee212/moryl_covidResults1_2021-11-19_16:06:28"
+          }
+        }
+      },
+      "Submission": {
+        "required": [
+          "_id",
+          "formName",
+          "timestamp",
+          "userId"
+        ],
+        "properties": {
+          "_id": {
+            "type": "integer",
+            "uniqueItems": true,
+            "example": "614b8627c85dfc6b10d2b713"
+          },
+          "domain": {
+            "type": "string",
+            "example": "MyDomainName"
+          },
+          "formData": {
+            "type": "object",
+            "example": {
+              "firstName": "Michael",
+              "lastName": "Oryl"
+            }
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/File"
+            }
+          },
+          "formName": {
+            "type": "string",
+            "example": "some-form-name"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "userId": {
+            "type": "string",
+            "example": "moryl"
+          }
+        }
+      },
+      "SubmissionRequest": {
+        "required": [
+          "formName",
+          "submitterUserId"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "formName": {
+            "type": "string",
+            "example": "some-form-name"
+          },
+          "submitterUserId": {
+            "type": "string",
+            "example": "moryl"
+          }
+        }
+      }
+    }
+  }
+}

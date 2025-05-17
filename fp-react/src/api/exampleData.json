@@ -1,0 +1,130 @@
+{
+  "content": [
+    {
+      "guid": "0e8fa628-e53f-4a91-b385-2898c27e9a24",
+      "auth": {
+        "userId": "dfinkle",
+        "forcePasswordChange": false,
+        "passwordLastSetDate": "2019-12-02T21:05:33.212+0000",
+        "failedAuthAttempts": 1,
+        "locked": true,
+        "disabled": false,
+        "mfaPhone": {
+          "countryCode": "1",
+          "phoneNumber": "6106390931",
+          "isMobile": true
+        }
+      },
+      "person": {
+        "firstName": "Daniel",
+        "lastName": "Finkle",
+        "dob": "19740203",
+        "displayName": "Daniel Finkle",
+        "taxId": "000000001"
+      },
+      "contact": {
+        "email": "DFinkle@htk.com",
+        "address": {
+          "zip": "19044"
+        }
+      },
+      "distribution": {
+        "officeCode": "V72",
+        "channel": "IFN",
+        "pmlAgentCode": "32183",
+        "htkAgentCode": "357",
+        "pmlContractFlag": true,
+        "htkContractFlag": true,
+        "piaContractFlag": true
+      },
+      "subscription": {
+        "activeSubscriptions": {
+          "roles": ["AGENT"]
+        },
+        "activeSubscriptionsCalculatedDate": "2019-12-16T16:17:19.883+0000"
+      },
+      "webAccess": {
+        "clientId": "00826249",
+        "hasADAccount": false,
+        "isRegistered": true,
+        "challengeQuestion1": "What was your childhood nickname?",
+        "challengeResponse1": "kid",
+        "challengeQuestion2": "In what city did you meet your spouse/significant other?",
+        "challengeResponse2": "Philadelphia"
+      },
+      "createdDate": "2019-12-02T21:03:02.694+0000",
+      "dataModifiedDate": "2019-12-02T21:22:59.062+0000"
+    },
+    {
+      "guid": "c8c022bb-1e32-42ea-9416-420b2957d5c1",
+      "auth": {
+        "userId": "malbrech",
+        "forcePasswordChange": false,
+        "passwordLastSetDate": "2020-01-08T19:41:43.323+0000",
+        "failedAuthAttempts": 0,
+        "locked": true,
+        "disabled": true,
+        "mfaPhone": {
+          "countryCode": "1",
+          "phoneNumber": "6099239166",
+          "isMobile": true
+        }
+      },
+      "person": {
+        "firstName": "Matt",
+        "lastName": "Albrecht",
+        "dob": "19940818",
+        "displayName": "Matt Albrecht",
+        "taxId": "000000002"
+      },
+      "contact": {
+        "email": "Albrecht.Matt@pennmutual.com",
+        "address": {
+          "zip": "08053"
+        }
+      },
+      "distribution": {
+        "channel": "HO",
+        "pmlContractFlag": false,
+        "htkContractFlag": false
+      },
+      "subscription": {
+        "activeSubscriptions": {
+          "roles": ["HOMEOFFICE"]
+        },
+        "activeSubscriptionsCalculatedDate": "2020-01-08T21:07:57.730+0000"
+      },
+      "webAccess": {
+        "clientId": "0",
+        "hasADAccount": false,
+        "isRegistered": true,
+        "services": [
+          "PPAL"
+        ],
+        "challengeQuestion1": "What was your childhood nickname?",
+        "challengeResponse1": "haam",
+        "challengeQuestion2": "What is the name of your favorite childhood friend?",
+        "challengeResponse2": "Dave"
+      },
+      "createdDate": "2020-01-08T19:41:42.600+0000",
+      "dataModifiedDate": "2020-01-08T19:41:55.166+0000"
+    }
+  ],
+  "last": true,
+  "totalPages": 1,
+  "totalElements": 2,
+  "size": 50,
+  "number": 0,
+  "first": true,
+  "sort": [
+    {
+      "direction": "ASC",
+      "property": "userId",
+      "ignoreCase": false,
+      "nullHandling": "NATIVE",
+      "descending": false,
+      "ascending": true
+    }
+  ],
+  "numberOfElements": 2
+}

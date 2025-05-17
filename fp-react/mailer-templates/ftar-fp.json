@@ -1,0 +1,26 @@
+{
+  "_id" : ObjectId("60e8a18327f1a8cfbd9ef5e0"),
+  "_class" : "com.pennmutual.services.mailer.model.Template",
+  "templateId" : "ftar-fp",
+  "bodyTemplate" : "",
+  "bodyTemplates" : [
+    {
+      "body" : " _formName: ${_formName!}\n submitterFullName: ${submitterFullName!}\n submitterUserID: ${submitterUserID!}\n submitterEmail: ${submitterEmail!}\n employeeType: ${employeeType!}\n startDate: ${startDate!}\n firstName: ${firstName!}\n lastName: ${lastName!}\n lanID: ${lanID!}\n taxID: ${taxID!}\n distributionChannel: ${distributionChannel!}\n officeCode: ${officeCode!}\n altEmailAddress: ${altEmailAddress!}\n hasPMLEmail: ${hasPMLEmail!'no'}\n pmlEmailAddress: ${pmlEmailAddress!}\n specialRequests: ${specialRequests!}",
+      "mimeType" : "text/plain",
+      "_default" : true
+    }
+  ],
+  "subjectTemplate" : "FTAR - FP Submission: ${firstName} ${lastName}",
+  "sentCounter" : 17,
+  "autoSeeded" : true,
+  "disabled" : false,
+  "requiredFields" : [],
+  "toList" : [
+    "ftarsupport@pennmutual.com"
+  ],
+  "ccList" : [],
+  "bccList" : ["rhodes.keneth@pennmutual.com", "oryl.michael@pennmutual.com"],
+  "namespaces" : [
+    "account-management"
+  ]
+}

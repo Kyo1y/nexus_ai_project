@@ -1,0 +1,12 @@
+﻿example,facts
+Show me all agents who have written a policy during the month of january 2023,Have Written\nPolicy Date
+Show me all agents who did not write a policy from Deceber 1st 2023 to Jan 1st 2024.,Have Written\nPolicy Date
+Show me all agents who did not write a policy after Jan 1st 2024.,Have Written\nPolicy Date
+"I'd like to see which agents in our office have not yet written policies with a face amount under $100,000 for the past six months.",Have Written\nFace Amount\nPolicy Date
+"Show me the agents who have written policies between a face amount of $250,000 within the last quarter.",Have Written\nFace Amount\nPolicy Date
+"Which agents have written policies with a face amount over $1,000,000 during the previous year?",Have Written\nFace Amount\nPolicy Date
+"During the past fiscal year, which agents have written in force policies with an annual premium exceeding $50,000?",Have Written\nPolicy Status\nPolicy Premium\nPolicy Date
+"Can you provide a list of agents who have issued policies with an annual premium surpassing $500,000 in the last twelve months?",Have Written\nPolicy Premium\nPolicy Date
+"Which agents in our network have pending policies with an annual premium higher than $100,000 in the preceding calendar year?",Have Written\nPolicy Status\nPolicy Premium\nPolicy Date
+"Could you identify the agents who have written both pending and in force policies with an annual premium exceeding $200,000 during the previous financial year?",Have Written\nPolicy Status\nPolicy Premium\nPolicy Date
+"I'm interested in knowing which agents have written policies with an annual premium over $1,500,000 in the last twelve months.",Have Written\nPolicy Premium\nPolicy Date

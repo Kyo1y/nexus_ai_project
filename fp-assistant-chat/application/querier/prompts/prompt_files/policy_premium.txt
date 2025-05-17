@@ -1,0 +1,17 @@
+GUIDELINES
+Given the user input, calculate a lower and upper bound for the range of policy premium values.
+Report your answer with the following format: 
+    Lower: X - "[Quotation]", where Quotation is a placeholder. The minimum possible lower bound value is 0.
+    Upper: Y - "[Quotation]", where Quotation is a placeholder. Use the term MAX to express a maximum value for the upper bound.
+
+PROMPT 
+Show me all agents in my office who have issued a policy with a premium worth over 50,000 since Jan 1, 2024.
+
+COMPLETION 
+Lower: 50000 - "over 50,000"
+Upper: MAX - "over 50,000"
+
+PROMPT 
+${input_text}
+
+COMPLETION

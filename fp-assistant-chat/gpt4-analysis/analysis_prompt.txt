@@ -1,0 +1,8 @@
+Given the following data on agent performance:
+${csv_data}
+
+1. Identify agents with abnormally higher or lower volume compared to historical norms. Pay careful attention to the absolute vs relative difference in the values.
+2. Explain why you chose the agents that you did.
+
+For these questions, do your best to provide estimates and explain what would be needed to get a more reliable answer.
+Keep your responses as concise as possible.

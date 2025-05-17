@@ -1,0 +1,1 @@
+from application.requestor.data_accesor import get_data

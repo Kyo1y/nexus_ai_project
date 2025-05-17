@@ -1,0 +1,24 @@
+version: 1
+
+formatters:
+  standard:
+    format: '%(asctime)s - PID %(process)d - %(levelname)s - %(name)s (%(filename)s - %(funcName)s) - %(message)s'
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: standard
+    stream: ext://sys.stdout
+
+loggers:
+
+  application:
+    level: DEBUG
+    handlers: [console]
+    propagate: no
+
+
+root:
+  level: INFO
+  handlers: [console]

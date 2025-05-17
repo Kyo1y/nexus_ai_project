@@ -1,0 +1,31 @@
+# Use this override to run model or prod mode locally
+# Assumes environment has all needed values
+# docker-compose -f docker-compose.other.yml up
+version: "3.8"
+services:
+  nodeserver:
+    image: pennmutual/chatquote
+    volumes:
+      - ~/certs:/app/certs
+    environment:
+      - ENVIRONMENT_NAME=${ENVIRONMENT_NAME}
+      - LOG_PRETTY=${LOG_PRETTY}
+      - MAILER_URL=${MAILER_URL}
+      - MONGO_URI=${MONGO_URI}
+      - NODE_ENV=${NODE_ENV}
+      - OAUTH_CLIENT_SECRET=${OAUTH_CLIENT_SECRET}
+      - OAUTH_CLIENT_ID=${OAUTH_CLIENT_ID}
+      - OAUTH_LOGOUT_URL=${OAUTH_LOGOUT_URL}
+      - OAUTH_AUTHORIZATION_URL=${OAUTH_AUTHORIZATION_URL}
+      - OAUTH_TOKEN_URL=${OAUTH_TOKEN_URL}
+      - OAUTH_USERINFO_URL=${OAUTH_USERINFO_URL}
+      - PERSONA_URL=${PERSONA_URL}
+      - PML_BASE_URL=${PML_BASE_URL}
+      - SESSION_SECRET=${SESSION_SECRET}
+      - SERVER_PORT=${SERVER_PORT}
+      - THREAD_COUNT=${THREAD_COUNT}
+      - TLS_CA_BUNDLE=/app/certs/PML-CA_Bundle.pem
+      - TLS_KEY_BASE64=${TLS_KEY_BASE64}
+      - TLS_CERT_BASE64=${TLS_CERT_BASE64}
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}

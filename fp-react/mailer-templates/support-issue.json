@@ -1,0 +1,29 @@
+{
+  "_id" : ObjectId("629e054eea0e6469edc7a6c3"),
+  "templateId" : "support-issue",
+  "bodyTemplate" : "",
+  "bodyTemplates" : [
+    {
+      "body" : " submitterFullName: ${submitterFullName!}\n submitterUserID: ${submitterUserID!}\n submitterEmail: ${submitterEmail!}\n supportGroup: ${supportGroup!}\n policyNumber: ${policyNumber!}\n problemSummary: ${problemSummary!}\n problemDescription: ${problemDescription!}\n attachment1: ${attachment1!'N/A'}\n attachment2: ${attachment2!'N/A'}\n attachment3: ${attachment3!'N/A'}\n ",
+      "mimeType" : "text/plain",
+      "_default" : true
+    }
+  ],
+  "subjectTemplate" : "Support Issue for ${supportGroup}",
+  "disabled" : false,
+  "requiredFields" : [],
+  "toList" : [
+    "aceccolsup@pennmutual.com",
+    "oryl.michael@pennmutual.com",
+    "Rhodes.Keneth@pennmutual.com"
+  ],
+  "ccList" : [],
+  "bccList" : [
+    "worman.michael@pennmutual.com",
+    "Nikiforov.Evgenii@pennmutual.com"
+  ],
+  "namespaces" : [
+    "application-support"
+  ],
+  "_class" : "com.pennmutual.services.mailer.model.Template"
+}

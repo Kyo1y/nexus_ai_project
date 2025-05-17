@@ -1,0 +1,9 @@
+echo Usage:
+echo ./extractfromp12 baseFilename p12Password
+echo
+echo Example:
+echo ./extractfromp12 Personal mypassword
+echo
+openssl pkcs12 -clcerts -nokeys -in "$1.p12" -out "$1.pem" -nodes -password pass:$2
+
+openssl pkcs12 -in "$1.p12" -nodes -out "$1.key" -nocerts -password pass:$2

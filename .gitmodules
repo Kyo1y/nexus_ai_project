@@ -1,0 +1,6 @@
+[submodule "fp-assistant"]
+	url = https://github.com/Kyo1y/fp-assistant.git
+[submodule "fp-assistant-chat"]
+	url = https://github.com/Kyo1y/fp-assistant-chat.git
+[submodule "fp-react"]
+	url = https://github.com/Kyo1y/fp-react.git

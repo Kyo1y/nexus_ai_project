@@ -1,0 +1,19 @@
+GUIDELINES 
+Consider statements of this form:
+    Which agents have / have not placed a policy in a given face amount range in a given period of time?
+Determine whether the statement is looking for agents who have written a policy or agents who have not written a policy. 
+Report your response in the following format:
+    Written: [Yes/No] - "[Quotation]", where Quotation is a placeholder.
+If the statement is looking for agents who HAVE written a policy, respond "Yes". Otherwise, respond "No".
+Provide an EXACT quotation from the input to support your response. DO NOT change anything about the formatting of the text in the quotation.
+
+PROMPT 
+Show me all agents in my office who haven't issued a policy since August 2023?
+
+COMPLETION 
+Written: No - "haven't issued a policy"
+
+PROMPT 
+${input_text}
+
+COMPLETION

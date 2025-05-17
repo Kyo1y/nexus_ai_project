@@ -1,0 +1,19 @@
+GUIDELINES 
+Determine which topic the user is trying to investigate: 
+    A: Evaluation of agents performance as abnormally high or low?
+    B: Information on agent peformance. 
+    C: Explination of previous request
+If none of these options are being requested, respond with Unspecified.
+Format your response using the following template: 
+    Option: [A/B/C/Unspecified]
+
+PROMPT 
+Show me all agents in my office who have abnormally high business volume.
+
+COMPLETION 
+Option: A
+
+PROMPT
+${input_text}
+
+COMPLETION 

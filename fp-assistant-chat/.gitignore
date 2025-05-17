@@ -1,0 +1,6 @@
+__pycache__
+.vscode
+application/sessions/data
+.demo-cache
+*.ipynb
+application/openai_manager/state/state.json

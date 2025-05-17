@@ -1,0 +1,26 @@
+{
+  "_id" : ObjectId("60e8a41d27f1a8cfbd9f8c3a"),
+  "_class" : "com.pennmutual.services.mailer.model.Template",
+  "templateId" : "ftar-staff",
+  "bodyTemplate" : "",
+  "bodyTemplates" : [
+    {
+      "body" : " _formName: ${_formName!}\n submitterFullName: ${submitterFullName!}\n submitterUserID: ${submitterUserID!}\n submitterEmail: ${submitterEmail!}\n employeeType: ${employeeType!}\n startDate: ${startDate!}\n firstName: ${firstName!}\n lastName: ${lastName!}\n lanID: ${lanID!}\n taxID: ${taxID!}\n staffRole: ${staffRole!}\n officeCode: ${officeCode!}\n distributionChannel: ${distributionChannel!}\n altEmailAddress: ${altEmailAddress!}\n hasPMLEmail: ${hasPMLEmail!'no'}\n pmlEmailAddress: ${pmlEmailAddress!}\n smartOffice: ${smartOffice?string('yes', 'no')}\n smartOfficeSmartView: ${(smartOfficeSmartView?? && smartOfficeSmartView)?string('yes','no')}\n requiresVPN: ${requiresVPN!}\n vpnCellNumber: ${vpnCellNumber!}\n paperclipBranchOSJ: ${paperclipBranchOSJ?string('yes', 'no')}\n paperclipClient: ${paperclipClient?string('yes', 'no')}\n paperclipFieldManagement: ${paperclipFieldManagement?string('yes', 'no')}\n paperclipRepFile: ${paperclipRepFile?string('yes', 'no')}\n specialRequests: ${specialRequests!}",
+      "mimeType" : "text/plain",
+      "_default" : true
+    }
+  ],
+  "subjectTemplate" : "FTAR - Office Staff Submission: ${firstName} ${lastName}",
+  "sentCounter" : 20,
+  "autoSeeded" : true,
+  "disabled" : false,
+  "requiredFields" : [],
+  "toList" : [
+    "ftarsupport@pennmutual.com"
+  ],
+  "ccList" : [],
+  "bccList" : ["rhodes.keneth@pennmutual.com", "oryl.michael@pennmutual.com"],
+  "namespaces" : [
+    "account-management"
+  ]
+}

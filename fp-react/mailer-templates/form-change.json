@@ -1,0 +1,30 @@
+{
+  "_id" : ObjectId("6206868864af9355a482f641"),
+  "templateId" : "form-change",
+  "bodyTemplate" : "",
+  "bodyTemplates" : [
+    {
+      "body" : " submitterFullName: ${submitterFullName!}\n submitterUserID: ${submitterUserID!}\n submitterEmail: ${submitterEmail!}\n department: ${department!}\n requestType: ${requestType!}\n formName: ${formName!}\n formNumber: ${formNumber!}\n deliveryDate: ${deliveryDate!}\n reasonType: ${reasonType!}\n reasonDetails: ${reasonDetails!'None given'}\n requestedChanges: ${requestedChanges!'None given'}\n example1: ${example1!'N/A'}\n example2: ${example2!'N/A'}\n example3: ${example3!'N/A'}\n ",
+      "mimeType" : "text/plain",
+      "_default" : true
+    }
+  ],
+  "subjectTemplate" : "Form Change Request: ${formName}",
+  "autoSeeded" : true,
+  "disabled" : false,
+  "requiredFields" : [],
+  "toList" : [
+    "oryl.michael@pennmutual.com",
+    "Rhodes.Keneth@pennmutual.com"
+  ],
+  "ccList" : [],
+  "bccList" : [
+    "worman.michael@pennmutual.com",
+    "Jones.Candice@pennmutual.com",
+    "Cush.Ashley@pennmutual.com"
+  ],
+  "namespaces" : [
+    "shared-services"
+  ],
+  "_class" : "com.pennmutual.services.mailer.model.Template"
+}

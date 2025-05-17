@@ -1,0 +1,20 @@
+GUIDELINES
+The user is attempting to answer the following question:
+    Which agents have had an abnormal performance in a given period of time?
+Given their input, determine what metric they are wanting to measure. 
+Report your answer with the following format: 
+    Metric: [Policy Count/Face Amount/Annual Premiums/Undefined] - "[Quotation]", where Quotation is a placeholder.
+
+The Metric response should ONLY be Policy Count, Face Amount, Annual Premiums, or Undefined, depending on the user's request. 
+Provide an EXACT quotation from the input to support your response. DO NOT change anything about the formatting of the text in the quotation.
+
+PROMPT 
+Show me all agents with an abnormally high business volume in my office who have issued a policy over 2 million since Jan 1, 2024.
+
+COMPLETION 
+Metric: Policy Count - "abnormally high business volume"
+
+PROMPT 
+${input_text}
+
+COMPLETION

@@ -1,0 +1,28 @@
+{
+  "_id" : ObjectId("6127dc1a0f4da7dd79cf4778"),
+  "templateId" : "wireless-access",
+  "bodyTemplate" : "",
+  "bodyTemplates" : [
+    {
+      "body" : " _formName: ${_formName!}\n submitterFullName: ${submitterFullName!}\n submitterUserID: ${submitterUserID!}\n submitterEmail: ${submitterEmail!}\n recipientName: ${recipientName!}\n recipientEmail: ${recipientEmail!}\n managerEmail: ${managerEmail!}\n positionType: ${positionType!}\n mobileOS: ${mobileOS!}\n phoneNumber: ${phoneNumber!}\n \n additionalInformation: ${additionalInformation!}",
+      "mimeType" : "text/plain",
+      "_default" : true
+    }
+  ],
+  "subjectTemplate" : "Wireless Access: ${recipientName}",
+  "sentCounter" : 0,
+  "autoSeeded" : true,
+  "disabled" : false,
+  "requiredFields" : [],
+  "toList" : [
+    "michael@oryl.com"
+  ],
+  "ccList" : [],
+  "bccList" : [
+    "oryl.michael@pennmutual.com"
+  ],
+  "namespaces" : [
+    "account-management"
+  ],
+  "_class" : "com.pennmutual.services.mailer.model.Template"
+}

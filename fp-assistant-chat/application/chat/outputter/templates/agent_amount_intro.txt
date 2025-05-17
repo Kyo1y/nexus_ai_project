@@ -1,0 +1,1 @@
+${total} agents have ${written} a policy over ${amount} ${date_qualifier} ${date}.

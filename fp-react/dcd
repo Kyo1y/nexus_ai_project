@@ -1,0 +1,2 @@
+# Stops any previously running docker-compose containers
+docker-compose down

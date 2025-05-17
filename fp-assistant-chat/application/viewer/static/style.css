@@ -1,0 +1,105 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight:300;
+    margin: 0;
+    padding: 0;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    overflow:hidden;
+}
+
+#chat-container {
+    max-width: 80%;
+    max-height: 50%;
+    margin: 50px auto;
+    background-color: #444; /* Darker container background color */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Light shadow */
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+#chat-box {
+    height: 65vh;
+    overflow-y: scroll;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin: 0 5%;
+    /* Style the scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(150, 150, 150, 0.7) rgba(0, 0, 0, 0.1); /* Adjust the color and transparency */
+}
+
+#chat-box div {
+    margin-bottom: 15px; /* Add space between individual messages */
+}
+
+#chat-box::-webkit-scrollbar {
+    width: 8px; /* Adjust the width of the scrollbar */
+}
+
+#chat-box::-webkit-scrollbar-thumb {
+    background-color: rgba(150, 150, 150, 0.7); /* Adjust the color and transparency */
+}
+
+#chat-box::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1); /* Adjust the transparency */
+}
+
+#user-input {
+    font-size: large;
+    width: 90%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #555; /* Darker border color */
+    border-radius: 5px;
+    color: #fff; /* Light text color */
+    background-color: #a5a4a4; /* Darker input background color */
+    margin: 0 5%;
+}
+
+#title-container h1{
+    font-weight:400;
+    font-size:50px;
+}
+
+#title-container {
+    text-align: center;
+    background-color: #444; /* Darker container background color */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Light shadow */
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff; /* Light text color */
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #555; /* Darker table background color */
+    color: #fff; /* Light text color */
+}
+
+th, td {
+    border: 1px solid #444; /* Darker border color */
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #333; /* Darker header background color */
+}
+
+#logo-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+#logo-container img {
+    width: 250px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    background-color:#444;
+}

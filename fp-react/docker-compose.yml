@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  nodeserver:
+    image: pennmutual/chatquote
+    environment:
+      - SERVER_PORT=3001
+      - NODE_ENV=production
+      - ENVIRONMENT_NAME=production
+    ports:
+      - 3001:3001

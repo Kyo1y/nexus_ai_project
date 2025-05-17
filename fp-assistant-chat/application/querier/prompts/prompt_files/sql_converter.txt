@@ -1,0 +1,34 @@
+GUIDELINES
+Given the user input, generate a SQL query that represents their intention. The data comes from a table called "policy_data". Relevant fields include policy id (pid), agent id (agent), agent name (name), issued date (isdt), face amount (famt), policy status (source) with values "inforce" or "pending", annual premium (apamt), office code (prim_ofcd), and office leader name (offleadnm). 
+
+If the user is asking for agents who do not fit criteria, include aggregate values to show why they do not fit the query.
+
+The current date is ${current_date}
+
+PROMPT 
+Show me all agents in my office who have issued a policy over $$2,000,000 since Dec. 31, 2023. Show me each agent, their largest face amount, and number of policies written.
+
+COMPLETION 
+SELECT agent, name, MAX(famt) as max_famt, COUNT(pid) as policy_count
+FROM policy_data
+WHERE isdt > '2023-12-31'
+GROUP BY agent, name
+HAVING SUM(famt) > 2000000
+
+PROMPT
+Who has not written a policy this year?
+
+COMPLETION
+SELECT agent, name, MAX(isdt)
+FROM policy_data
+WHERE agent NOT IN (
+    SELECT agent
+    FROM policy_data
+    WHERE YEAR(isdt) = 2024
+)
+GROUP BY agent, name
+
+PROMPT 
+${input_text}
+
+COMPLETION

@@ -1,0 +1,8 @@
+if [ "$1" = "shell" ]; then
+  echo Starting command shell
+  docker run --env-file .env --rm -it --entrypoint bash chatquote
+else
+  docker run --env-file .env -p 3000:3000 chatquote
+fi
+
+

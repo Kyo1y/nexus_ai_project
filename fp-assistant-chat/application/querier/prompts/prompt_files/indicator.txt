@@ -1,0 +1,22 @@
+GUIDELINES 
+Given a user request, determine which facts from the following list are present in the input: 
+    Have Written: Agents who have or haven't written a policy 
+    Policy Status: Policies that are in force or pending 
+    Policy Premium: The policy premium amount 
+    Face Amount: The policy face amount
+    Policy Date: Time range for the requested information 
+Format your response as a list of facts contained in the input. If no facts are found, write None. 
+
+PROMPT 
+Show me all agents in my office who have written a pending policy with a premium value above $$50,000 after Jan 1, 2021.
+
+COMPLETION 
+Have Written
+Policy Status
+Policy Premium
+Policy Date
+
+PROMPT 
+${input_text}
+
+COMPLETION 

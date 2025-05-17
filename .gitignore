@@ -1,0 +1,6 @@
+fp-react/env/
+.ssh/
+fp-react/node_modules/
+fp-assistant/.vscode/
+fp-assistant-chat/.vscode/
+.env

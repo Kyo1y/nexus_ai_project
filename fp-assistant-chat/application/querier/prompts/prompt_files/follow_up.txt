@@ -1,0 +1,18 @@
+Ensure that the user explicitly asks to see agents who have abnormally high and/or low performance.
+If the user asks for information on policies that have or have not been written by agents with criteria that might seem to imply abnormal agent performance, do not consider this a request for abnormal performance. We only want to consider a request for abnormal performance if the user explicitly asks to see it. 
+
+If the user's initial message doesn't explicitly ask for abnormal performance, please correct your response to agent performance and provide the answer in the same format. Use the below examples as demonstration: 
+
+PROMPT 
+Show me all agents who have abnormally low business volume.
+
+COMPLETION 
+Option: A
+
+PROMPT 
+Which agents in my office have written a policy with a face amount over $$10 million in the last quarter? 
+
+COMPLETION 
+Option: B
+
+{$input_text}

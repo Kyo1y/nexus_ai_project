@@ -1,0 +1,30 @@
+{
+  "_id" : ObjectId("632491eb55304daad370fea9"),
+  "templateId" : "service-hours",
+  "bodyTemplate" : "",
+  "bodyTemplates" : [
+    {
+      "body" : "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html>\n<head><title>Penn Mutual</title>\n    <style>a {\n        color: \"#006A55\";\n    }</style>\n</head>\n<body style=\"font-family: Arial, Helvetica, sans-serif;background-color: #f7f7f7;line-height: 20px;font-size: 14px;\">\n<center>\n    <table style=\"background-color: white;border: 1px solid #dddddd;width: 600px;margin: auto;margin-top: 2.5em;font-family: Arial, Helvetica, sans-serif;\" border=\"0\">\n        <tr>\n            <td>\n                <table style=\"font-family:Arial, Helvetica, sans-serif;border-bottom: 2px black solid;padding-bottom: 3px;\" width=\"100%\" border=\"0\"\" cellpadding=\"2\" cellspacing=\"2\">\n        <tr>\n            <td align=\"left\" width=\"50%\">\n                <img width=\"332\" width=\"60\" alt=\"== Penn Mutual ==\" src=\"http://image.mail-pennmutual.com/lib/fe5d15707c6100797c16/m/1/61a6ec03-0063-43ca-adac-a6a325365fae.png\"/>\n            </td>\n            <td width=\"50%\" align=\"right\" style=\"padding-right:10px;font-weight:bold;font-size: 14px;font-family:Arial, Helvetica, sans-serif;\"></td>\n        </tr>\n    </table>\n    <table style=\"font-family: Arial, Helvetica, sans-serif;\">\n        <tr>\n            <td style=\"padding-left: 20px; padding-right: 20px;padding-top: 20px;\">\n                <h1 style=\"font-weight: 700;font-size: 24px;\">Volunteer Hours for: ${volunteerName!}</h1>\n                <p>\n                    <b>Volunteer Email:</b> ${volunteerEmail!}<br/>\n                    <b>Department:</b> ${department!}<br/>\n                    <b>Field Office:</b> ${fieldOffice!}\n                </p>\n                <p>\n                    <b>Organization Name:</b> ${organizationName!}<br/>\n                    <b>Event Name:</b> ${eventName!}<br/>\n                    <b>Event Description:</b> ${eventDescription!}<br/>\n                    <b>Service Date:</b> ${serviceDate!}<br/>\n                    <b>Service Hours:</b> ${serviceHours!}<br/>\n                    <b>Event Outcomes:</b> ${eventOutcomes!}<br/>\n                    <b>PML Event:</b> ${pmlSponsoredEvent!}\n                </p>\n                <p>\n                    <b>Submitter Name:</b> ${submitterFullName!}<br/>\n                    <b>Submitter User ID:</b> ${submitterUserID!}<br/>\n                    <b>Submitter Email:</b> ${submitterEmail!}\n                </p>\n\n                <p style=\"padding-top: 50px;color: grey;font-size: 10px;font-style: italic;\">Please do not reply. Emails sent to this address are not monitored.</p></td>\n        </tr>\n    </table>\n    </tr></td></table>\n    <table style=\"width:600px; margin:auto;font-family:Arial, Helvetica, sans-serif;\">\n        <tr>\n            <td style=\"margin: auto;font-size: 0.65em;color: grey;width: 600px;padding-top: 1.25em;text-align: center;\">&copy; The Penn Mutual Life Insurance Company, Philadelphia PA 19172</td>\n        </tr>\n        <tr>\n            <td style=\"margin:auto;font-size: 0.65em;width: 600px;text-align: center;\"><a href=\"https://www.pennmutual.com/terms-of-use\">Terms of Use</a> |\n                <a href=\"https://www.pennmutual.com/privacy-policies\">Privacy Policies</a> | <a href=\"https://www.pennmutual.com/accessibility-policy\">Accessibility Policy</a></td>\n        </tr>\n    </table>\n</center>\n</body>\n</html>\n",
+      "mimeType" : "text/html",
+      "_default" : true
+    }
+  ],
+  "subjectTemplate" : "Service Hours Submission",
+  "sentCounter" : 0,
+  "autoSeeded" : false,
+  "disabled" : false,
+  "requiredFields" : [],
+  "toList" : [
+    "oryl.michael@pennmutual.com"
+  ],
+  "ccList" : [
+    "worman.michael@pennmutual.com",
+    "Klenk.Carol@pennmutual.com"
+  ],
+  "bccList" : [],
+  "namespaces" : [
+    "hr"
+  ],
+  "_class" : "com.pennmutual.services.mailer.model.Template",
+  "fromAddress" : "Penn Mutual <noreply-internal@pennmutual.com>"
+}

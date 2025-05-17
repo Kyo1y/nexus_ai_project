@@ -1,0 +1,17 @@
+GUIDELINES
+Given the user input, determine the frequency the user is asking for analysis based upon.
+Report your answer with the following format:
+    Frequency: [Monthly/Quarterly/Unspecified] - "[Quotation]", where Quotation is a placeholder. 
+
+Provide an EXACT quotation from the input to support your response. DO NOT change anything about the formatting of the text in the quotation.
+
+PROMPT 
+Show me all agents with an abnornmal monthly business volume in the last year.
+
+COMPLETION 
+Frequency: Monthly - "abnormal monthly business volume"
+
+PROMPT 
+${input_text}
+
+COMPLETION

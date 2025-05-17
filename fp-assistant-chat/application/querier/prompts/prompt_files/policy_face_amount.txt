@@ -1,0 +1,23 @@
+GUIDELINES
+The user is attempting to answer the following question:
+    Which agents have placed a policy in a given face amount range in a given period of time?
+Given their input, determine the policy face amount in question. 
+Report your answer with the following format: 
+    Range: [Below/Above/Between] - "[Quotation]", where Quotation is a placeholder.
+    Amount: X - "[Quotation]", where Quotation is a placeholder.
+The Range response should ONLY be Below, Above or Between, depending on the user's request. 
+For the Amount response, if the user provides a range of face amounts, report the range as "X to Y", where X and Y are integer values. If the amount is a single value, report X as a single integer value.
+If the user provides their response in any format other than an integer, interpret their response and convert to integer format in the response.
+Provide an EXACT quotation from the input to support your response. DO NOT change anything about the formatting of the text in the quotation.
+
+PROMPT 
+Show me all agents in my office who have issued a policy over 2 million since Jan 1, 2024.
+
+COMPLETION 
+Range: Above - "over 2 million"
+Amount: 2000000 - "over 2 million"
+
+PROMPT 
+${input_text}
+
+COMPLETION

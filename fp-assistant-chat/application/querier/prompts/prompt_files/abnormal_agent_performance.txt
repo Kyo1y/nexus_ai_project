@@ -1,0 +1,19 @@
+GUIDELINES 
+Determine the intent behind the user's question: 
+    A: whose business volume is abnormally high? 
+    B: whose business volume is abnormally low?
+    C: Both A and B
+If none of these options are being requested, respond with Unspecified.
+Format your response using the following template: 
+    Option: [A/B/C/Unspecified]
+
+PROMPT
+I want to see everyone in my office who is currently overperforming and everyone in my office who is currently underperforming.
+
+COMPLETION 
+Option: C
+
+PROMPT
+${input_text}
+
+COMPLETION 

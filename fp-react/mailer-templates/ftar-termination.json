@@ -1,0 +1,28 @@
+{
+  "_id" : ObjectId("6127a03a0f4da7dd79c4bc7f"),
+  "templateId" : "ftar-termination",
+  "bodyTemplate" : "",
+  "bodyTemplates" : [
+    {
+      "body" : " _formName: ${_formName!}\n submitterFullName: ${submitterFullName!}\n submitterUserID: ${submitterUserID!}\n submitterEmail: ${submitterEmail!}\n firstName: ${firstName!}\n lastName: ${lastName!}\n positionType: ${positionType!}\n terminationType: ${terminationType!}\n terminationDate: ${terminationDate!}\n terminationOther: ${terminationOther!}\n lanID: ${lanID!}\n last4: ${last4!}\n officeCode: ${officeCode!}\n \n exceptionRequests: ${exceptions!}",
+      "mimeType" : "text/plain",
+      "_default" : true
+    }
+  ],
+  "subjectTemplate" : "FTAR - Termination: ${firstName} ${lastName}",
+  "sentCounter" : 3,
+  "autoSeeded" : true,
+  "disabled" : false,
+  "requiredFields" : [],
+  "toList" : [
+    "michael@oryl.com"
+  ],
+  "ccList" : [],
+  "bccList" : [
+    "oryl.michael@pennmutual.com"
+  ],
+  "namespaces" : [
+    "account-management"
+  ],
+  "_class" : "com.pennmutual.services.mailer.model.Template"
+}

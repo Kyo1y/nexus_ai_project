@@ -1,0 +1,15 @@
+GUIDELINES 
+Given the user input, determine if the user is looking for policies with status that is either In Force, Pending or Both.
+Report your response with the following format: 
+    Status: [Inforce/Pending/Both] - "[Quotation]", where Quotation is a placeholder. 
+
+PROMPT 
+Could you identify the agents who have written pending or in force policies with an annual premium exceeding $200,000 during the previous financial year?
+
+COMPLETION 
+Status: Both - "written pending or in force policies"
+
+PROMPT 
+${input_text}
+
+COMPLETION

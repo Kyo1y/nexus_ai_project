@@ -1,0 +1,10 @@
+﻿example,written,date_range,date_value
+Show me all agents who have written a policy during the month of january 2023,TRUE,between,"Date: 2023-01-01 to 2023-01-31 - """""
+Show me all agents who did not write a policy from Deceber 1st 2023 to Jan 1st 2024.,FALSE,between,"Date: 2023-12-01 to 2024-01-01 - """""
+Show me all agents who did not write a policy after Jan 1st 2024.,FALSE,after,"Date: 2024-01-01 - """""
+"Show me all agents who hav not written a policy before January 1st, 2020",FALSE,before,"Date: 2020-01-01 - """""
+Show me all agents who have written a policy before January 1st 2020,TRUE,before,"Date: 2020-01-01 - """""
+Show me all agents who have written a policy after January 1st 2024,TRUE,after,"Date: 2024-01-01 - """""
+"Hey, can you show me all agents in my office who haven't written a policy before March 2023?",FALSE,before,"Date: 2023-03-01 - """""
+"Could you show me which agents in my office haven't written a policy after June 15th, 2022?",FALSE,after,"Date: 2022-06-15 - """""
+"Hey, I'm curious, can you tell me which agents in my office haven't written a policy between November 2021 and February 2022?",FALSE,between,"Date: 2021-11-01 to 2022-02-28 - """""

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FP Assistant Viewer</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight:300;
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Dark background color */
+            color: #fff; /* Light text color */
+            overflow:hidden;
+        }
+
+        #chat-container {
+            max-width: 80%;
+            max-height: 50%;
+            margin: 50px auto;
+            background-color: #444; /* Darker container background color */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Light shadow */
+            padding: 20px;
+            border-radius: 10px;
+            
+        }
+
+        #chat-box {
+            height: 65vh;
+            overflow-y: scroll;
+            padding: 10px;
+            margin-bottom: 10px;
+            margin: 0 5%;
+            /* Style the scrollbar */
+            scrollbar-width: thin;
+            scrollbar-color: rgba(150, 150, 150, 0.7) rgba(0, 0, 0, 0.1); /* Adjust the color and transparency */
+        }
+
+        #stop-button {
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            margin: 0px;
+        }
+
+        #chat-box div {
+            margin-bottom: 15px; /* Add space between individual messages */
+        }
+
+        #chat-box::-webkit-scrollbar {
+            width: 8px; /* Adjust the width of the scrollbar */
+        }
+
+        #chat-box::-webkit-scrollbar-thumb {
+            background-color: rgba(150, 150, 150, 0.7); /* Adjust the color and transparency */
+        }
+
+        #chat-box::-webkit-scrollbar-track {
+            background-color: rgba(0, 0, 0, 0.1); /* Adjust the transparency */
+        }
+
+        #user-input {
+            font-size: large;
+            width: 80%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #555; /* Darker border color */
+            border-radius: 5px;
+            color: #fff; /* Light text color */
+            background-color: #a5a4a4; /* Darker input background color */
+            margin: 0 5%;
+        }
+
+        #title-container h1{
+            font-weight:400;
+            font-size:50px;
+        }
+
+        #title-container {
+            text-align: center;
+            background-color: #444; /* Darker container background color */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Light shadow */
+            padding: 10px;
+            border-radius: 10px;
+            color: #fff; /* Light text color */
+        }
+
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #555; /* Darker table background color */
+            color: #fff; /* Light text color */
+        }
+
+        th, td {
+            border: 1px solid #444; /* Darker border color */
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333; /* Darker header background color */
+        }
+
+        #logo-container {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+
+        #logo-container img {
+            width: 250px; /* Adjust the width as needed */
+            height: auto; /* Maintain the aspect ratio */
+            background-color:#444;
+        }
+    
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500&display=swap">
+</head>
+<body>
+    <!-- <div id="logo-container">
+        <img src="{{ url_for('viewer.static', filename='PML_linear_logo_cmyk-white.png') }}" alt="PML Logo">
+    </div> -->
+    <div id="title-container">
+        <h1>FP Assistant</h1>
+    </div>
+    <div id="chat-container">
+        <div id="chat-box">
+            <!-- Display the initial message -->
+            <div><strong>FP Assistant:</strong> {{ initial_message }}</div>
+        </div>
+        <div id="input-box">
+            <input type="text" id="user-input" placeholder="Message FP Assistant...">
+        </div>
+
+        <!-- Container for the injected HTML -->
+        <div id="injected-table-container"></div>
+    </div>
+
+<script>
+    const chatBox = document.getElementById('chat-box');
+    const userInput = document.getElementById('user-input');
+    const injectedTableContainer = document.getElementById('injected-table-container');
+    let stopGeneration = false;
+
+    async function appendMessage(sender, message) {
+        // removeThinking();
+        const messageElement = document.createElement('div');
+        
+        const senderElement = document.createElement('strong');
+        senderElement.innerText = sender;
+
+        const messageTextElement = document.createElement('span');
+        // messageTextElement.innerText = message;
+
+        // Append the sender and message elements to the main message element
+        messageElement.appendChild(senderElement);
+        messageElement.appendChild(document.createTextNode(': ')); // Add a separator
+        messageElement.appendChild(messageTextElement);
+
+        chatBox.appendChild(messageElement);
+
+        if (sender === "FP Assistant") {
+            messageTextElement.setAttribute("id", "fp-interval");
+            console.log(message);
+            await intervalChunkDisplay(message, "fp-interval", 10);
+            messageTextElement.removeAttribute("id");
+        } else {
+            messageTextElement.innerText = message;
+        }
+
+        chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to the bottom
+    }
+
+    async function intervalDisplay(text, containerId, delay) {
+        return new Promise(resolve => {
+            const container = document.getElementById(containerId);
+            // Clear the container before displaying new text
+            container.innerHTML = '';
+
+            // Loop through each character in the text
+            // const chunks = text.split(" ");
+            for (let i = 0; i < text.length; i++) {
+                // Use setTimeout to add each character with a delay
+                setTimeout(() => {
+                    container.textContent += text[i];
+
+                    if (i === text.length - 1) {
+                        resolve();
+                    }
+                }, i * delay);
+            }
+        });
+    }
+
+    async function intervalChunkDisplay(text, containerId, delay) {
+        const container = document.getElementById(containerId);
+
+        // Clear the container before displaying new text
+        container.innerHTML = '';
+
+        // Loop through each character in the text
+        for (let i = 0; i < text.length; i++) {
+            // Create a span for each character
+            
+            var charElement;
+            if (text[i] === '\n') {
+                charElement = document.createElement('br')
+            } else if (text[i] == ' ') {
+                charElement = document.createTextNode(' ');
+            } else {
+                charElement = document.createTextNode(text[i]);
+            }
+
+            // Append the span to the container
+            container.appendChild(charElement);
+
+            // Use setTimeout to add each character with a delay
+            await new Promise(resolve => setTimeout(resolve, delay));
+        }
+    }
+
+    function createMessageNode(sender, message) {
+        const messageElement = document.createElement('div');
+        
+        const senderElement = document.createElement('strong');
+        senderElement.innerText = sender;
+
+        const messageTextElement = document.createElement('span');
+        messageTextElement.innerText = message;
+
+        // Append the sender and message elements to the main message element
+        messageElement.appendChild(senderElement);
+        messageElement.appendChild(document.createTextNode(': ')); // Add a separator
+        messageElement.appendChild(messageTextElement);
+        return messageElement
+    }
+
+    async function addThinking() {
+        // Create element to hold thinking text
+        const thinkingElement = document.createElement('div');
+        thinkingElement.setAttribute("id", "thinking-div");
+
+        const senderElement = document.createElement('strong');
+        senderElement.innerText = 'FP Assistant';
+
+        const messageTextElement = document.createElement('span');
+        messageTextElement.setAttribute("id", "delay-message");
+        // messageTextElement.innerText = 'Thinking...';
+
+        // Append the sender and message elements to the main message element
+        thinkingElement.appendChild(senderElement);
+        thinkingElement.appendChild(document.createTextNode(': ')); // Add a separator
+        thinkingElement.appendChild(messageTextElement);
+
+        chatBox.appendChild(thinkingElement);
+    }
+
+    function removeThinking() {
+        const thinkingElement = document.getElementById("thinking-div");
+        
+        // Removes elelment
+        if (chatBox && thinkingElement) {
+            chatBox.removeChild(thinkingElement);
+        }
+        
+    }
+
+
+    async function getData(userMessage) {
+        try {
+            const response = await fetch('/viewer/backend', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message: userMessage })});
+            console.log("response =>" + response);
+            const data = await response.json();
+            console.log("data =>" + data);
+            return data;
+        } catch (error) {
+            console.error('An error occured when fetching the data.', error);
+            return 'An error occured, please try again later.';
+        }
+    }
+
+    // Function to simulate a delay
+    const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+
+    async function updateChatBox() {
+        const userMessage = userInput.value.trim();
+        userInput.value = '';
+        appendMessage('You', userMessage);
+
+        // Display "Thinking..."
+        createStopButton();
+        addThinking();
+        console.log('running');
+        await intervalDisplay("Thinking...", "delay-message", 25);
+        console.log('done');
+
+        // const chat = await getData(userMessage);
+        const data = await Promise.race([getData(userMessage)]);
+        
+
+        removeThinking();
+        await appendMessage('FP Assistant', data.chat);
+        if (data.display_table) {
+            await loopThroughtTable(data.html_table);
+            // var innerTable = document.createElement('div');
+            // innerTable.innerHTML = data.html_table;
+            // chatBox.appendChild(innerTable);
+        }
+        removeStopButton();
+    }
+
+    async function loopThroughtTable(html_table) {
+        var tempDiv = document.createElement('div');
+
+        tempDiv.innerHTML = html_table;
+        
+        const chatTable = tempDiv.querySelector('#chat-table');
+        var rows = chatTable.rows;
+        const tableDiv = document.createElement('div');
+        const newTable = document.createElement('table');
+        newTable.setAttribute('id', 'chat-table');
+        chatBox.appendChild(newTable)
+
+        for (var i=0; i < chatTable.rows.length; i++) {
+            if (i === 0) {
+                var header = newTable.createTHead();
+                var newRow = header.insertRow(0);
+            } else if (i === 1) {
+                var body = newTable.createTBody()
+                var newRow = body.insertRow(0)
+            } else {
+                var newRow = newTable.insertRow(-1);
+            }
+
+            // Access the cells of the current row
+            var cells = rows[i].cells;
+            
+            // Loop through each cell of the current row
+            for (var j = 0; j < cells.length; j++) {
+                
+                // Access the content of the current cell
+                var cellContent = cells[j].innerHTML;
+                if (i === 0) {
+                    var newCell = document.createElement('th');
+                    newRow.appendChild(newCell);
+                } else {
+                    var newCell = newRow.insertCell(-1);
+                    
+                }
+                
+                newCell.setAttribute('id', 'update-cell');
+                await intervalDisplay(cellContent, 'update-cell', 10);
+                
+                newCell.removeAttribute('id');
+                if (j === 0) {
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                }
+                await delay(50);
+            }
+            // Only break after finishing row
+            if (stopGeneration) {
+                    break;
+                }
+        } // End outter for-loop
+        
+        if (stopGeneration) {
+            stopGeneration = false;
+        }
+    }
+
+    function stopOutput() {
+        console.log('Stop button clickked')
+        stopGeneration = true;
+    }
+
+    function createStopButton() {
+            let stopButton = document.createElement("button");
+            stopButton.setAttribute("id", "stop-button");
+            stopButton.innerHTML = 'Stop <i class="fa fa-stop-circle"></i>';
+            stopButton.onclick = stopOutput;
+
+            document.getElementById("input-box").insertBefore(stopButton, document.getElementById("user-input"));
+        }
+
+    function removeStopButton() {
+        let stopButton = document.querySelector("#input-box button");
+        if (stopButton) {
+            stopButton.remove();
+        }
+    }
+
+    // async function tableToArray() {
+    //     var tempDiv = document.createElement('div');
+
+    //     tempDiv.innerHTML = html_table;
+
+    //     const chatTable = tempDiv.querySelector('#chat-table');
+
+    //     for (var i=0; i < chatTable.rows.length; i++) {
+    //         if (i === 0) {
+    //             var header = newTable.createTHead();
+    //             var newRow = header.insertRow(0);
+    //         } else {
+    //             var newRow = newTable.insertRow(-1);
+    //         }
+
+    //         // Access the cells of the current row
+    //         var cells = rows[i].cells;
+    //         if (i === 0) {
+    //             var newCell = document.createElement('th');
+    //             newRow.appendChild(newCell);
+    //         } else {
+    //             var newCell = newRow.insertCell(-1);
+                
+    //         }
+    //         // Loop through each cell of the current row
+    //         for (var j = 0; j < cells.length; j++) {
+    //             // Access the content of the current cell
+    //             var cellContent = cells[j].innerHTML;
+    //             if (i === 0) {
+    //                 var newCell = document.createElement('th');
+    //                 newRow.appendChild(newCell);
+    //             } else {
+    //                 var newCell = newRow.insertCell(-1);
+                    
+    //             }
+    //             newCell.setAttribute('id', 'update-cell');
+    //             await intervalDisplay(cellContent, 'update-cell', 100)
+                
+    //             newCell.removeAttribute('id');
+    //             await delay(500);
+    //         }
+    //     }
+    // }
+
+    userInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            updateChatBox();
+        }
+    });
+</script>
+
+</body>
+</html>

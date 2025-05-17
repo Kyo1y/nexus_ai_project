@@ -1,0 +1,7 @@
+__pycache__
+*.ipynb
+.DS_Store
+*.tar
+.vscode
+app/data_manager/agents/
+.idea
